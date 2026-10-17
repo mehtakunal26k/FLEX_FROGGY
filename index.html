@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FROGGY</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+        body{
+            background-color: beige;
+            color: #2d3748;
+            line-height: 1.6;
+
+
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 40px;
+            background-color: antiquewhite;
+            border-bottom: 2px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a202c;
+
+        }
+        .icon{
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+        }
+        .nav-links{
+            display: flex;
+            gap: 24px
+            ; list-style: none;
+            align-items: center;
+
+        }
+        .nav-links li a{
+            text-decoration: none;
+            color: antiquewhite;
+            background-color: #2d3748;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: 600;
+            text-transform: capitalize;
+            transition: color 0.2s ease;
+
+        }
+        .nav-links li a:hover{
+            color: azure;
+        }
+        .btn{
+            text-decoration: none;
+            background-color: #2e7d32;
+            color: beige;
+            padding: 5px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            align-self: center;
+            transition: background-color 0.2s ease;
+
+        }
+        .btn:hover{
+            background-color: #256628;
+        }
+        .screenshot{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 20px;
+            width: 100%;
+            
+        }
+        .screenshot img{
+            max-width: 100%;
+        
+            width: 850px;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #e2e8f0 ;
+            display: block;
+            object-fit: cover;
+
+           
+            
+        }
+        #summary{
+            max-width: 900px;
+            margin: 0 auto 60px;
+            padding: 30px;
+           border: 2px solid ;
+           border-radius: 12px;
+        }
+        .h1{
+            font-size: 28px;
+            color: darkolivegreen;
+            text-align: center;
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+
+        }
+        .h2{
+            font-size: 18px;
+            color: black
+            ;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            border-bottom: 2px solid;
+            padding-bottom: 6px;
+
+        }
+        #summary p {
+            white-space: pre-line;
+            font-size: 14px;
+            line-height: 1.8;
+            padding: 18px;
+            border: 2px solid ;
+            border-radius: 8px;
+        }
+        @media (max-width: 700px)
+        {
+            .navbar{
+                flex-direction: column;
+                gap: 14px
+                ;
+                padding: 16px;
+            }
+            .nav-links{
+                gap: 16px
+                ;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        
+            <a href="#" class="logo">
+                <img src="./Screenshot (6).png" alt="kkart" class="icon">
+                <span>Kunal</span>
+            </a>
+       
+        <nav>
+            <ul class="nav-links">
+                
+                <li><a href="#about">game completed</a></li>
+                <li><a href="#summary">Summary</a></li>
+                
+            </ul>
+        </nav>
+        <a href="#signup" class="btn">Sign Up</a>
+    </header>
+    <div class="screnshot" id="about">
+        <img src="./Screenshot (9).png" alt="flexbox froggy game completed screenshot" width="1200px" height="700px">
+    </div>
+    <section id="summary">
+        <h1 class="h1">SUMMARY</h1>
+        <h2  class="h2">Container-Level (Parent) Properties
+        </h2>
+        <p>These properties are applied to the element with display: flex:
+            justify-content: Aligns flex items along the main axis (horizontal by default).
+            Values: flex-start, flex-end, center, space-between, space-around, space-evenly.
+            align-items: Aligns flex items along the cross axis (vertical by default).
+            Values: flex-start, flex-end, center, baseline, stretch.
+            flex-direction: Sets the direction of the main axis and order of elements.
+            Values: row (default), row-reverse, column, column-reverse.
+            flex-wrap: Controls whether items must stay on one line or can wrap onto multiple lines.
+            Values: nowrap (default), wrap, wrap-reverse.
+            flex-flow: Shorthand combining flex-direction and flex-wrap into a single declaration (e.g., flex-flow: row wrap).
+            align-content: Controls alignment and spacing of multiple lines along the cross axis (only works when flex-wrap: wrap causes wrapping). 
+            Values: flex-start, flex-end, center, space-between, space-around, stretch.</p>
+            <h2>Item-Level (Child) Properties</h2>
+            <p >These properties are applied to individual items inside the flex container:
+                order: Changes the display order of a specific item without modifying the HTML structure.
+                Values: Any integer (default is 0, negative numbers move items forward, positive move them back).
+                align-self: Overrides the parent container's align-items rule for that single flex child.
+                Values: auto, flex-start, flex-end, center, baseline, stretch</p>
+    </section>
+
+</body>
+</html>
